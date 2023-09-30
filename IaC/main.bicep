@@ -39,17 +39,17 @@ param cpuCore string = '0.5'
   '3.5'
   '4'
 ])
-param memorySize string = '1'
+param memorySize string = '0.5'
 
 @description('Minimum number of replicas that will be deployed')
 @minValue(0)
 @maxValue(25)
-param minReplicas int = 1
+param minReplicas int = 0
 
 @description('Maximum number of replicas that will be deployed')
 @minValue(0)
 @maxValue(25)
-param maxReplicas int = 3
+param maxReplicas int = 2
 
 resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
   name: containerAppLogAnalyticsName
