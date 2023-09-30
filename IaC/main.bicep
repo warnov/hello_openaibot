@@ -10,9 +10,6 @@ param containerAppLogAnalyticsName string = 'log-${uniqueString(resourceGroup().
 @description('Specifies the location for all resources.')
 param location string = resourceGroup().location
 
-@description('Specifies the name of the Azure Container Apps.')
-param acrName string = 'acr${uniqueString(resourceGroup().id)}'
-
 @description('Specifies the docker container image to deploy.')
 param containerImage string = 'mcr.microsoft.com/azuredocs/containerapps-helloworld:latest'
 
