@@ -56,13 +56,23 @@ param minReplicas int = 0
 @maxValue(25)
 param maxReplicas int = 2
 
-resource acr 'Microsoft.ContainerRegistry/registries@2021-06-01-preview' = {
+@minLength(5)
+@maxLength(50)
+@description('Provide a globally unique name of your Azure Container Registry')
+param acrName string = 'acr${uniqueString(resourceGroup().id)}'
+
+@description('Provide a tier of your Azure Container Registry.')
+param acrSku string = 'Basic'
+
+resource acrResource 'Microsoft.ContainerRegistry/registries@2023-01-01-preview' = {
   name: acrName
   location: location
   sku: {
-    name: 'Basic'
+    name: acrSku
   }
-  adminUserEnabled: false
+  properties: {
+    adminUserEnabled: false
+  }
 }
 
 resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
