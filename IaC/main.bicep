@@ -16,6 +16,13 @@ param containerImage string = 'mcr.microsoft.com/azuredocs/containerapps-hellowo
 @description('Specifies the container port.')
 param targetPort int = 80
 
+@description('Specifies the Microsoft App Id for the bot.')
+param msaAppId string = '08e9736d-0be7-4d0c-9e92-f3d35b58e0b2'
+
+@description('Specifies the docker container image to deploy.')
+param containerImage string = 'mcr.microsoft.com/azuredocs/containerapps-helloworld:latest'
+
+@description('Specifies Bot Name')
 param botServices_oabobotpoc_name string = 'oabot${uniqueString(resourceGroup().id)}'
 
 @description('Number of CPU cores the container can use. Can be with a maximum of two decimals.')
@@ -90,10 +97,10 @@ resource botServices_pibobotdev_name_resource 'Microsoft.BotService/botServices@
   }
   kind: 'azurebot'
   properties: {
-    displayName: 'PIBO PoC'
+    displayName: 'OABot PoC'
     endpoint: 'https://yourcontainerapp.azurewebsites.net/api/messages'
     msaAppType: 'MultiTenant'
-    msaAppId: 'x000xxx0-00x0-0x0x-0x00-000xxxx00000'
+    msaAppId: msaAppId
   }
 }
 
