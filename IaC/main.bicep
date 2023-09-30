@@ -93,7 +93,7 @@ resource botServices_pibobotdev_name_resource 'Microsoft.BotService/botServices@
     displayName: 'PIBO PoC'
     endpoint: 'https://yourcontainerapp.azurewebsites.net/api/messages'
     msaAppType: 'MultiTenant'
-    msaAppId: 'f238cac1-23d3-4b5d-8e50-f59daee65667'
+    msaAppId: 'x000xxx0-00x0-0x0x-0x00-000xxxx00000'
   }
 }
 
