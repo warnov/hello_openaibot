@@ -28,7 +28,7 @@ jobs:
           az group create --location ${{ env.AZURE_REGION }} --name ${{ env.AZURE_RG }}  
 
       # Deploy Bicep file
-    - name: Deploy Container Apps Env
+    - name: Deploy PoC Env
       uses: azure/arm-deploy@v1
       with:
         subscriptionId: ${{ env.AZURE_SUBSCRIPTION }}
