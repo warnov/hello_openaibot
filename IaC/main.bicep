@@ -10,6 +10,9 @@ param containerAppLogAnalyticsName string = 'log-${uniqueString(resourceGroup().
 @description('Specifies the location for all resources.')
 param location string = resourceGroup().location
 
+@description('Specifies the name of the Azure Container Apps.')
+param acrName string = 'acr${uniqueString(resourceGroup().id)}'
+
 @description('Specifies the docker container image to deploy.')
 param containerImage string = 'mcr.microsoft.com/azuredocs/containerapps-helloworld:latest'
 
@@ -50,6 +53,15 @@ param minReplicas int = 0
 @minValue(0)
 @maxValue(25)
 param maxReplicas int = 2
+
+resource acr 'Microsoft.ContainerRegistry/registries@2021-06-01-preview' = {
+  name: acrName
+  location: location
+  sku: {
+    name: 'Basic'
+  }
+  adminUserEnabled: false
+}
 
 resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
   name: containerAppLogAnalyticsName
