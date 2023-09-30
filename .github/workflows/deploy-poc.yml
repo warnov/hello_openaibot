@@ -6,6 +6,7 @@ env:
   AZURE_RG: OABoT_POC
   AZURE_SUBSCRIPTION: ${{ secrets.AZURE_SUBSCRIPTION }}
   AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+  AZURE_REGION: eastus
 
 jobs:
   deploy-bicep-template:
@@ -20,7 +21,11 @@ jobs:
       with:
         creds: ${{ env.AZURE_CREDENTIALS }}
 
-    
+    - name: Create Azure RG
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az group create --location ${{ env.AZURE_REGION }} --name ${{ env.AZURE_RG }}  
 
       # Deploy Bicep file
     - name: Deploy Container Apps Env
