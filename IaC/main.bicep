@@ -27,7 +27,7 @@ param targetPort int = 80
   '1.75'
   '2'
 ])
-param cpuCore string = '0.5'
+param cpuCore string = '0.25'
 
 @description('Amount of memory (in gibibytes, GiB) allocated to the container up to 4GiB. Can be with a maximum of two decimals. Ratio with CPU cores must be equal to 2.')
 @allowed([
