@@ -19,6 +19,8 @@ param containerImage string = 'mcr.microsoft.com/azuredocs/containerapps-hellowo
 @description('Specifies the container port.')
 param targetPort int = 80
 
+param botServices_oabobotpoc_name string = 'oabot${uniqueString(resourceGroup().id)}'
+
 @description('Number of CPU cores the container can use. Can be with a maximum of two decimals.')
 @allowed([
   '0.25'
@@ -70,6 +72,21 @@ resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2022-10-01' = {
     sku: {
       name: 'PerGB2018'
     }
+  }
+}
+
+resource botServices_pibobotdev_name_resource 'Microsoft.BotService/botServices@2022-06-15-preview' = {
+  name: botServices_oabobotpoc_name
+  location: 'global'
+  sku: {
+    name: 'F0'
+  }
+  kind: 'azurebot'
+  properties: {
+    displayName: 'PIBO PoC'
+    endpoint: 'https://yourcontainerapp.azurewebsites.net/api/messages'
+    msaAppType: 'MultiTenant'
+    msaAppId: 'ab7a1256-daaf-4ae7-8e60-9ae470132d1d'
   }
 }
 
