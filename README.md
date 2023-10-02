@@ -3,7 +3,7 @@
 Generated using `dotnet new echobot` v4.17.1
 
 ### Reference Architecture
-![](https://raw.githubusercontent.com/oaviles/hello_openaibot/main/oaopenaibot_reference_architecture.png)
+![](/oaopenaibot_reference_architecture.png)
 
 ### Resources
 * [Create a bot with the Bot Framework SDK](https://learn.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-create-bot?view=azure-bot-service-4.0&tabs=csharp%2Cvs)
