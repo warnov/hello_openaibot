@@ -1,5 +1,8 @@
 ﻿# DevSquad AI Bot Project
 
+Reference Architecture:
+![](https://raw.githubusercontent.com/oaviles/hello_openaibot/main/oaopenaibot_reference_architecture.png)
+
 ## Resources
 * [Create a bot with the Bot Framework SDK](https://learn.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-create-bot?view=azure-bot-service-4.0&tabs=csharp%2Cvs)
 * [Get started using GPT-35-Turbo and GPT-4 with Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-csharp)
