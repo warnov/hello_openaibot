@@ -1,9 +1,11 @@
 ﻿# DevSquad AI Bot Project
 
-Reference Architecture:
+Generated using `dotnet new echobot` v4.17.1
+
+### Reference Architecture
 ![](https://raw.githubusercontent.com/oaviles/hello_openaibot/main/oaopenaibot_reference_architecture.png)
 
-## Resources
+### Resources
 * [Create a bot with the Bot Framework SDK](https://learn.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-create-bot?view=azure-bot-service-4.0&tabs=csharp%2Cvs)
 * [Get started using GPT-35-Turbo and GPT-4 with Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-csharp)
 
@@ -11,7 +13,7 @@ Reference Architecture:
 
 To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](https://aka.ms/azuredeployment) for a complete list of deployment instructions.
 
-## Further reading
+#### Other Resources
 
 - [Introduction to Azure OpenAI Service](https://learn.microsoft.com/en-us/training/modules/explore-azure-openai/)
 - [Azure OpenAI Service Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
@@ -25,4 +27,9 @@ To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](htt
 - [Language Understanding using LUIS](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/)
 - [Channels and Bot Connector Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-concepts?view=azure-bot-service-4.0)
 
-Generated using `dotnet new echobot` v4.17.1
+### Check More DevSquad Projects
+* [DevSquad Main Project](https://github.com/microsoft/devsquad-accelerators)
+
+> Note: This page is getting updated so make sure to check regularly for new resources.
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
