@@ -11,7 +11,12 @@ Generated using `dotnet new echobot` v4.17.1
 
 ## Deploy the bot to Azure
 
-To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](https://aka.ms/azuredeployment) for a complete list of deployment instructions.
+To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](https://aka.ms/azuredeployment) for a complete list of deployment instructions. 
+
+[Create an identify for your Bot:](https://learn.microsoft.com/en-us/azure/bot-service/provision-and-publish-a-bot?view=azure-bot-service-4.0&tabs=singletenant%2Ccsharp#create-an-identity-resource)
+* Single-tenant `az ad app create --display-name "<app-registration-display-name>" --sign-in-audience "AzureADMyOrg"` 
+* Multi-tenant `az ad app create --display-name "<app-registration-display-name>" --sign-in-audience "AzureADandPersonalMicrosoftAccount"` 
+
 
 #### Other Resources
 
