@@ -1,0 +1,33 @@
+name: 4 Deploy Image to Container Apps
+
+on: workflow_dispatch
+
+env:
+  AZURE_RG: OABoT_POC
+  AZURE_SUBSCRIPTION: ${{ secrets.AZURE_SUBSCRIPTION }}
+  AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+  AZURE_REGION: eastus
+  ACR_LOGINSERVER: ${{ secrets.CONTAINER_REGISTRY }}
+  IMAGE_NAME: oabot
+  IMAGE_TAG: 3978
+  CONTAINER_APP_NAME: oabotdemov3
+  CONTAINER_APP_ENV:  env-c4gxnd5jx4mf6
+
+jobs:
+  deploy-container-app:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ env.AZURE_CREDENTIALS }}
+
+    - name: Create Container App Bot
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az containerapp create -n ${{ env.CONTAINER_APP_NAME }}  -g ${{ env.AZURE_RG }} --environment ${{ env.CONTAINER_APP_ENV }} --yaml "yaml_files/containerapp_config.yml"
