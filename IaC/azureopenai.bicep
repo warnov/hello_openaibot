@@ -1,5 +1,5 @@
 @description('Specifies the name for all Azure Open AI service.')
-param accounts_azureopenai_name string = 'Azure Open AI Service Name' # Update the name of your Azure Open AI Service
+param accounts_azureopenai_name string = 'Azure Open AI Service Name' // Update the name of your Azure Open AI Service
 
 @description('Specifies the location for all resources.')
 param location string = resourceGroup().location
