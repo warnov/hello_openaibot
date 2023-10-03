@@ -1,0 +1,44 @@
+location: eastus
+name: oabotdemov3
+resourceGroup: OABoT_POC
+type: Microsoft.App/containerApps
+tags:
+  tagname: value
+properties:
+  configuration:
+    ingress:
+      external: true
+      allowInsecure: false
+      targetPort: 3978
+      transport: Auto
+  template:
+    containers:
+      - image: oaviles/oabot:3978
+        name: oabot
+        env:
+          - name: MicrosoftAppType
+            value: Update_with_your_values
+          - name: MicrosoftAppId
+            value: Update_with_your_values
+          - name: MicrosoftAppPassword
+            value: Update_with_your_values
+          - name: MicrosoftAppTenantId
+            value: Update_with_your_values
+          - name: AZURE_OPENAI_ENDPOINT
+            value: Update_with_your_values
+          - name: AZURE_OPENAI_KEY
+            value: Update_with_your_values
+          - name: SYSTEM_WHO
+            value: Update_with_your_values
+          - name: WELCOME_TEXT
+            value: Update_with_your_values
+          - name: TOKENS_LIMIT
+            value: Update_with_your_values
+          - name: DEPLOYMENT_MODEL
+            value: Update_with_your_values
+        resources:
+          cpu: 0.25
+          memory: 0.5Gi
+    scale:
+      minReplicas: 0
+      maxReplicas: 2
