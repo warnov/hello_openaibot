@@ -1,0 +1,38 @@
+name: 3 Deploy Analytics Env
+
+on: workflow_dispatch
+
+env:
+  AZURE_RG: OABoT_POC
+  AZURE_SUBSCRIPTION: ${{ secrets.AZURE_SUBSCRIPTION }}
+  AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+  AZURE_REGION: eastus
+  
+jobs:
+  deploy-bicep-template:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ env.AZURE_CREDENTIALS }}
+
+    - name: Create Azure RG
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az group create --location ${{ env.AZURE_REGION }} --name ${{ env.AZURE_RG }}  
+
+      # Deploy Bicep file
+    - name: Deploy PoC Env
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ env.AZURE_SUBSCRIPTION }}
+        resourceGroupName: ${{ env.AZURE_RG }}
+        template: ./IaC/azuredeploy_analytics.json
+        parameters: ./IaC/azuredeploy_analytics.parameters.json
+        failOnStdErr: false
