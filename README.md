@@ -1,4 +1,4 @@
-﻿# DevSquad AI Bot Project
+﻿# DevSquad Conversational AI: Bot Project
 
 Generated using `dotnet new echobot` v4.17.1
 
