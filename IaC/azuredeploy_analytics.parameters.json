@@ -19,6 +19,9 @@
       },
         "administratorLoginPassword": {
         "value": "GEN-PASSWORD"
-        }
+      },
+        "blobContainerName": {
+        "value": "yourowndata"
+      }
     }
 }
