@@ -1,4 +1,4 @@
-name: 5 Deploy Image to Container Apps
+name: 5 Deploy Image to Container Apps V2
 
 on: workflow_dispatch
 
