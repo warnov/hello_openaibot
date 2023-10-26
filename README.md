@@ -5,12 +5,15 @@ Generated using `dotnet new echobot` v4.17.1
 ### Reference Architecture
 ![](/oaopenaibot_reference_architecture.png)
 
+### Custom RAG pattern for Cognitive Search
+![](https://learn.microsoft.com/en-us/azure/search/media/retrieval-augmented-generation-overview/architecture-diagram.png#lightbox)
+
 ### Resources
 * [Create a bot with the Bot Framework SDK](https://learn.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-create-bot?view=azure-bot-service-4.0&tabs=csharp%2Cvs)
 * [Get started using GPT-35-Turbo and GPT-4 with Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-csharp)
 * [Chat with Azure OpenAI models using your own data](https://learn.microsoft.com/en-us/azure/ai-services/openai/use-your-data-quickstart?tabs=command-line&pivots=programming-language-csharp)
 
-## Deploy the bot to Azure
+### Deploy the bot to Azure
 
 To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](https://aka.ms/azuredeployment) for a complete list of deployment instructions. 
 
@@ -32,6 +35,8 @@ To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](htt
 - [How to work with the GPT-35-Turbo and GPT-4 models](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/chatgpt?pivots=programming-language-chat-completions)
 - [Semantic search or vector search for your index](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data#search-options)
 - [Channels and Bot Connector Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-concepts?view=azure-bot-service-4.0)
+- [Azure Cognitive Search resources](https://learn.microsoft.com/en-us/azure/search/search-get-started-portal#clean-up-resources)
+- [Retrieval Augmented Generation (RAG) in Azure Cognitive Search](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)
 - [Language Understanding using LUIS](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/)
 
 ### Check More DevSquad Projects
