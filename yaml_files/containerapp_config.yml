@@ -36,6 +36,12 @@ properties:
             value: Update_with_your_values
           - name: DEPLOYMENT_MODEL
             value: Update_with_your_values
+          - name: SEARCH_ENPOINT
+            value: Update_with_your_values
+          - name: SEARCH_KEY
+            value: Update_with_your_values
+          - name: SEARCH_INDEX
+            value: Update_with_your_values
         resources:
           cpu: 0.25
           memory: 0.5Gi
