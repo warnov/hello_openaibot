@@ -1,12 +1,14 @@
 ﻿# DevSquad Conversational AI: Bot Project
 
-Generated using `dotnet new echobot` v4.17.1
-
 ### Reference Architecture
 ![](/oaopenaibot_reference_architecture.png)
 
 ### Custom RAG pattern for Cognitive Search
 ![](https://learn.microsoft.com/en-us/azure/search/media/retrieval-augmented-generation-overview/architecture-diagram.png#lightbox)
+
+### Note
+* Generated using `dotnet new echobot` v4.17.1
+* [.NET Template Package](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new)
 
 ### Resources
 * [Create a bot with the Bot Framework SDK](https://learn.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-create-bot?view=azure-bot-service-4.0&tabs=csharp%2Cvs)
