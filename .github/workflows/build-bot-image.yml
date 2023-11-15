@@ -4,10 +4,14 @@ name: 4 Build and Push image to ACR
 on: workflow_dispatch
 
 env:
-  ACR_REGISTRY: ${{ secrets.CONTAINER_REGISTRY }}
+  ACR_LOGINSERVER: ${{ secrets.ACR_LOGINSERVER }}
+  ACR_USERNAME: ${{ secrets.ACR_USERNAME }}
+  ACR_PASSWORD: ${{ secrets.ACR_PASSWORD }}
   image_name: oabot
   #tag: ${{ github.sha }}
+  #tag: test
   tag: 3978
+  #tag: latest
 
 jobs:
   # This workflow contains a job called "build"
@@ -24,14 +28,14 @@ jobs:
         uses: Azure/docker-login@v1
         with:
           # Container registry username
-          username: ${{ secrets.ACR_USERNAME }}
+          username: ${{ env.ACR_USERNAME }}
           # Container registry password
-          password: ${{ secrets.ACR_PASSWORD }}
+          password: ${{ env.ACR_PASSWORD }}
           # Container registry server url
-          login-server: ${{ env.ACR_REGISTRY }}
+          login-server: ${{ env.ACR_LOGINSERVER }}
           
       - name: Build and Push Image to ACR
         #working-directory: src
         run: |
-          docker build . -t ${{ env.ACR_REGISTRY }}/${{ env.image_name }}:${{ env.tag }}
-          docker push ${{ env.ACR_REGISTRY }}/${{ env.image_name }}:${{ env.tag }}
+          docker build . -t ${{ env.ACR_LOGINSERVER }}/${{ env.image_name }}:${{ env.tag }}
+          docker push ${{ env.ACR_LOGINSERVER }}/${{ env.image_name }}:${{ env.tag }}
