@@ -1,4 +1,4 @@
-name: 6 Update Image to Container Apps
+name: 7 Update Image to Container Apps
 
 on: workflow_dispatch
 
