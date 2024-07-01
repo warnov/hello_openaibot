@@ -17,7 +17,7 @@ param containerImage string = 'mcr.microsoft.com/azuredocs/containerapps-hellowo
 param targetPort int = 80
 
 @description('Specifies the Microsoft App Id for the bot.')
-param msaAppId string = 'a753747a-a8a3-4505-aac4-8db4e2816dfa'
+param msaAppId string = '2a7f0b0c-ba55-4eb0-b43b-c365c9d31502'
 
 @description('Specifies Bot Name')
 param botServices_oabobotpoc_name string = 'oabot${uniqueString(resourceGroup().id)}'
