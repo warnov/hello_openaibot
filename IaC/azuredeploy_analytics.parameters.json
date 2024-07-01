@@ -3,19 +3,19 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "accountDataLakeName": {
-        "value": "DevSquadDataLake"
+        "value": "devsquaddatalake"
       },
       "location": {
         "value": "eastus"
       },
         "accountCognitiveSearchName": {
-        "value": "DevSquadCognitive"
+        "value": "devsquadcognitive"
       },
          "serverName": {
-         "value": "SvrDevSquad"
+         "value": "svrdevsquad"
       },
         "administratorLogin": {
-        "value": "DevSquadAdmin"
+        "value": "devsquadadmin"
       },
         "administratorLoginPassword": {
         "value": "Colombia.1"
