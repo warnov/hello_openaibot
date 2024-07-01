@@ -3,25 +3,25 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "accountDataLakeName": {
-        "value": "GEN-UNIQUE"
+        "value": "DevSquadDataLake"
       },
       "location": {
         "value": "eastus"
       },
         "accountCognitiveSearchName": {
-        "value": "GEN-UNIQUE"
+        "value": "DevSquadCognitive"
       },
          "serverName": {
-         "value": "GEN-UNIQUE"
+         "value": "SvrDevSquad"
       },
         "administratorLogin": {
-        "value": "GEN-UNIQUE"
+        "value": "DevSquadAdmin"
       },
         "administratorLoginPassword": {
-        "value": "GEN-PASSWORD"
+        "value": "Colombia.1"
       },
         "blobContainerName": {
-        "value": "yourowndata"
+        "value": "devsquadowndata"
       }
     }
 }
